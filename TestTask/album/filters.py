@@ -1,10 +1,10 @@
 import django_filters
-from .models import Album, Photo, Category
 from django_filters import CharFilter, NumberFilter, DateTimeFilter
 
+from .models import Album, Photo
 
 class AlbumFilter(django_filters.FilterSet):
-    # album_title = CharFilter(field_name='album_title', lookup_expr='icontains', label='Поиск по названию альбома')
+    title = CharFilter(field_name='album_title', lookup_expr='icontains')
 
     album_pub_date = DateTimeFilter(field_name='album_pub_date', lookup_expr='exact')
     album_pub_date_gte = DateTimeFilter(field_name='album_pub_date', lookup_expr='gte')
@@ -24,8 +24,6 @@ class AlbumFilter(django_filters.FilterSet):
 
 
 class PhotoFilter(django_filters.FilterSet):
-    # album_title = CharFilter(field_name='album__title', lookup_expr='icontains', label='Поиск по названию альбома')
-
     category = CharFilter(field_name='category', lookup_expr='icontains', label='Поиск по категории')
 
     photo_pub_date = DateTimeFilter(field_name='photo_pub_date', lookup_expr='exact')
@@ -37,5 +35,3 @@ class PhotoFilter(django_filters.FilterSet):
     class Meta:
         model = Photo
         fields = ['category', 'photo_pub_date']
-
-        # exclude = ('album', 'tag')
