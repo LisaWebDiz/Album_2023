@@ -1,6 +1,5 @@
 from django.core.exceptions import ValidationError
 
-
 def image_validator(value):
     image_type = ['.png', '.jpeg', '.jpg']
     image_size = value.size
