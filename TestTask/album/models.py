@@ -50,7 +50,6 @@ class Photo(models.Model):
 
 
 class Category(models.Model):
-    _meta = None
     cat_title = models.CharField(max_length=30, default='Категория', null=False, verbose_name='Категория фотографии')
 
     def __str__(self):
