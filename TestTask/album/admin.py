@@ -3,7 +3,7 @@ from .models import Album, Photo, User, Category
 
 
 class AlbumAdmin(admin.ModelAdmin):
-    list_display = ('id', 'album_title', 'description', 'album_pub_date', 'photos_quantity')
+    list_display = ('id', 'album_title', 'description', 'album_pub_date', 'photos_quantity', 'user')
     list_display_links = ('id', 'album_title')
     search_fields = ('album_pub_date', 'user')
 
