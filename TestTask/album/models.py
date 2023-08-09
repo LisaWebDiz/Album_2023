@@ -15,6 +15,10 @@ class Album(models.Model):
     photos_quantity = models.PositiveIntegerField(default=0, verbose_name='Количество фотографий в альбоме')
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, verbose_name='Автор альбома')
 
+    @property
+    def photos_quantity(self):
+        return self.album_photos.count()
+    
     def __str__(self):
         return 'Альбом: ' + self.album_title
 
