@@ -39,6 +39,9 @@ class PhotoAPIList(generics.ListCreateAPIView):
     filter_backends = (DjangoFilterBackend, SearchFilter, OrderingFilter)
     filterset_fields = ['category', 'photo_pub_date']
 
+    def get_queryset(self):
+        return Photo.objects.filter(user=self.request.user)
+
 
 class PhotoAPIUpdate(generics.RetrieveUpdateAPIView):
     queryset = Photo.objects.all()
