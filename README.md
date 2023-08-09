@@ -11,3 +11,8 @@ pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
+
+Панель администратора:
+http://127.0.0.1:8000/admin/
+Логин: Lisa
+Пароль: Lisa
