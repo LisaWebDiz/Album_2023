@@ -17,6 +17,9 @@ http://127.0.0.1:8000/admin/
 Логин: Lisa
 Пароль: Lisa
 
+Авторизоваться в браузере:
+http://127.0.0.1:8000/api/v1/drf-authlogin/
+
 Postman:
 Создать нового пользователя: GET http://127.0.0.1:8000/api/v1/auth/users/
 Получить токен: POST http://127.0.0.1:8000/auth/token/login
