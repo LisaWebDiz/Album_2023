@@ -9,7 +9,7 @@ from album.validators import image_validator
 
 
 class Album(models.Model):
-    album_title = models.CharField(max_length=120, default='Альбом', unique=True, null=False, verbose_name='Наименование альбома')
+    album_title = models.CharField(max_length=120, default='Альбом', unique=True, verbose_name='Наименование альбома')
     description = models.TextField(blank=True, null=True, verbose_name='Описание альбома')
     album_pub_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания альбома')
     photos_quantity = models.PositiveIntegerField(default=0, verbose_name='Количество фотографий в альбоме')
