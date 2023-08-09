@@ -24,6 +24,10 @@ http://127.0.0.1:8000/api/v1/drf-authlogin/
 http://127.0.0.1:8000/swagger/
   
 Postman:  
-Создать нового пользователя: GET http://127.0.0.1:8000/api/v1/auth/users/  
-Получить токен: POST http://127.0.0.1:8000/auth/token/login  
+Создание нового пользователя: GET http://127.0.0.1:8000/api/v1/auth/users/  
+Получение токена: POST http://127.0.0.1:8000/auth/token/login  
 Разлогиниться: POST http://127.0.0.1:8000/auth/token/logout  
+
+Командная строка Linux:  
+Создание нового пользователя: curl -d "username=Lisa3&password=Lisa3765?:%" -X POST http://localhost:8000/api/v1/auth/users/  
+Получение токена: curl -d "username=Lisa3&password=Lisa3765?:%" -X POST http://localhost:8000/auth/token/login/
