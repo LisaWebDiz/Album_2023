@@ -46,7 +46,7 @@ class Photo(models.Model):
     class Meta:
         verbose_name = 'Фотография'
         verbose_name_plural = 'Фотографии'
-        ordering = ['album']
+        ordering = ['photo_pub_date']
 
 
 class Category(models.Model):
