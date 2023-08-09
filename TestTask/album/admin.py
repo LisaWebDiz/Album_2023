@@ -5,7 +5,8 @@ from .models import Album, Photo, User, Category
 class AlbumAdmin(admin.ModelAdmin):
     list_display = ('id', 'album_title', 'description', 'album_pub_date', 'photos_quantity', 'user')
     list_display_links = ('id', 'album_title')
-    search_fields = ('album_pub_date', 'user')
+    list_filter = ('album_pub_date', 'user')
+    search_fields = ('album_title',)
 
     def get_queryset(self, request):
         qs = super(AlbumAdmin, self).get_queryset(request)
@@ -18,14 +19,16 @@ class AlbumAdmin(admin.ModelAdmin):
             obj.user = request.user
         obj.save()
 
+
 admin.site.register(Album, AlbumAdmin)
 
 
 class PhotoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'image_file', 'album', 'photo_pub_date', 'thumbnail')
+    list_display = ('id', 'image_file', 'album', 'photo_pub_date', 'thumbnail', 'user')
     list_display_links = ('id', 'image_file', 'thumbnail')
-    search_fields = ('photo_pub_date', 'album')
     list_filter = ('photo_pub_date', 'album',)
+    search_fields = ('id',)
+
 
 admin.site.register(Photo, PhotoAdmin)
 
@@ -34,6 +37,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
     list_display = ('id', 'cat_title')
     list_display_links = ('id', 'cat_title')
+    list_filter = ('cat_title',)
     search_fields = ('cat_title',)
+
 
 admin.site.register(Category, CategoryAdmin)
