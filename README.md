@@ -19,6 +19,9 @@ http://127.0.0.1:8000/admin/
   
 Авторизоваться в браузере:  
 http://127.0.0.1:8000/api/v1/drf-authlogin/  
+
+Документация swagger:  
+http://127.0.0.1:8000/swagger/
   
 Postman:  
 Создать нового пользователя: GET http://127.0.0.1:8000/api/v1/auth/users/  
