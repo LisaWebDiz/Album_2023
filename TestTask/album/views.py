@@ -12,7 +12,7 @@ class AlbumAPIList(generics.ListCreateAPIView):
     serializer_class = AlbumSerializer
 
     filter_backends = (DjangoFilterBackend, SearchFilter, OrderingFilter)
-    filterset_fields = ['album_pub_date', 'photos_quantity']
+    filterset_fields = ['album_pub_date']
 
     def get_queryset(self):
         return Album.objects.filter(user=self.request.user)
