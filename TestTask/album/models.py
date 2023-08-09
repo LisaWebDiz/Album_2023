@@ -40,7 +40,8 @@ class Photo(models.Model):
     category = models.ManyToManyField('Category', verbose_name='Категория фотографии', related_name='photo_category')
     album = models.ForeignKey('Album', on_delete=models.CASCADE, verbose_name='Альбом фотографии', related_name='album_photos')
     thumbnail = ImageSpecField(source='image_file', processors=[ResizeToFit(width=150, height=150, upscale=None, mat_color=None, anchor='c')], format="PNG", options={'quality': 60})
-
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, verbose_name='Автор альбома', related_name='user_photos')
+    
     def __str__(self):
         return 'Фотография: ' + str(self.pk)
 
