@@ -3,6 +3,12 @@
 Создать файл .env в TestTask/TestTask с данными:  
 SECRET_KEY=''  
 DEBUG=True  
+DB_ENGINE=''  
+DB_NAME=''  
+DB_USER=''  
+DB_PASSWORD=''  
+DB_HOST=''  
+DB_PORT=''  
 
 Выполнить команды:  
 python 3 -m venv venv  
