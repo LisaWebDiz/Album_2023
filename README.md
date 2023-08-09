@@ -11,13 +11,15 @@ pip install -r requirements.txt
 python manage.py makemigrations  
 python manage.py migrate  
 python manage.py runserver  
-  
+
+Заполнение баз данных: python manage.py loaddata ./*/fixtures/*.json  
+
 Панель администратора:  
 http://127.0.0.1:8000/admin/  
 Логин: Lisa  
 Пароль: Lisa  
   
-Авторизоваться в браузере:  
+Авторизация в браузере:  
 http://127.0.0.1:8000/api/v1/drf-authlogin/  
 
 Документация swagger:  
