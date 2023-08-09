@@ -2,7 +2,6 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 from rest_framework import generics
 from rest_framework.filters import OrderingFilter, SearchFilter
-from rest_framework.viewsets import GenericViewSet
 
 from .models import Album, Photo, Category
 from .serializer import AlbumSerializer, PhotoSerializer, CategorySerializer
@@ -31,7 +30,6 @@ class AlbumAPIUpdate(generics.RetrieveUpdateAPIView):
 class AlbumAPIDestroy(generics.RetrieveDestroyAPIView):
     queryset = Album.objects.all()
     serializer_class = AlbumSerializer
-    # permission_classes = (IsOwnerOrReadOnly, )
 
 
 class PhotoAPIList(generics.ListCreateAPIView):
