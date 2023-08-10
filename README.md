@@ -1,4 +1,4 @@
-#Выполнить команду: cd TestTask/album  
+# Выполнить команду: cd TestTask/album  
   
 Создать файл .env в TestTask/TestTask с данными:  
 SECRET_KEY=''  
