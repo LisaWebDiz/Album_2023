@@ -1,27 +1,18 @@
 ### Запуск
 
-Выполнить команду: cd TestTask/album  
-  
-Создать файл .env в TestTask/TestTask с данными:  
-SECRET_KEY=''  
-DEBUG=True  
-DB_ENGINE=''  
-DB_NAME=''  
-DB_USER=''  
-DB_PASSWORD=''  
-DB_HOST=''  
-DB_PORT=''  
+Cкопировать файл 
+cp example.env .env
 
 Выполнить команды:  
-python 3 -m venv venv  
-. ./venv/bin/activate  
+python3 -m venv venv  
+source ./venv/bin/activate  
 pip install -r requirements.txt  
 python manage.py makemigrations  
 python manage.py migrate  
 python manage.py runserver  
 
 ### Заполнение баз данных:   
-python manage.py loaddata ./*/fixtures/*.json  
+python manage.py loaddata album/fixtures/dump.json 
 
 ### Панель администратора:  
 http://127.0.0.1:8000/admin/  
