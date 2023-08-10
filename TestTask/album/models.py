@@ -28,10 +28,6 @@ class Album(models.Model):
     class Meta:
         verbose_name = 'Альбом'
         verbose_name_plural = 'Альбомы'
-        ordering = ['album_title']
-
-    def get_fields(self):
-        return [(field.verbose_name, field.value_from_object(self)) for field in self.__class__._meta.fields]
 
 
 class Photo(models.Model):
@@ -51,7 +47,6 @@ class Photo(models.Model):
     class Meta:
         verbose_name = 'Фотография'
         verbose_name_plural = 'Фотографии'
-        ordering = ['photo_pub_date']
 
 
 class Category(models.Model):
@@ -66,7 +61,3 @@ class Category(models.Model):
     class Meta:
         verbose_name = 'Категория'
         verbose_name_plural = 'Категория'
-        ordering = ['cat_title']
-
-    def get_fields(self):
-        return [(field.verbose_name, field.value_from_object(self)) for field in self.__class__._meta.fields]
