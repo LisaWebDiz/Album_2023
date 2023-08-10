@@ -3,12 +3,11 @@ from .models import Album, Photo, Category
 
 
 class PhotoSerializer(serializers.ModelSerializer):
-    image_file = serializers.SerializerMethodField()
     thumbnail = serializers.SerializerMethodField()
 
     class Meta:
         model = Photo
-        fields = ['image_file', 'album', 'category', 'photo_pub_date', 'thumbnail', 'user']
+        fields = ['image_file', 'album', 'category', 'photo_pub_date', 'thumbnail']
 
     def get_image_file(self, obj):
         return obj.image_file.url
