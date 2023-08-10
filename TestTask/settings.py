@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'album.apps.AlbumConfig',
+    'album',
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
@@ -167,24 +167,4 @@ REST_FRAMEWORK = {
 LOGIN_REDIRECT_URL = '/api/v1/'
 
 
-
-# SWAGGER_SETTINGS = {
-#
-#     # 'DEFAULT_INFO': 'netbox.urls.openapi_info',
-#     # 'DEFAULT_INFO': 'import.path.to.urls.api_info',
-#     "DEFAULT_GENERATOR_CLASS": "rest_framework.schemas.generators.BaseSchemaGenerator",
-#
-#     'SECURITY_DEFINITIONS': {
-#         'basic': {
-#             'type': 'basic'
-#         }
-#     },
-#
-# }
-#
-# REDOC_SETTINGS = {
-#    'LAZY_RENDERING': False,
-#
-# }
-
-
+LOGIN_REDIRECT_URL = '/api/v1/'
