@@ -13,7 +13,8 @@ class AlbumAPIList(generics.ListCreateAPIView):
 
     filter_backends = (DjangoFilterBackend, SearchFilter, OrderingFilter)
     filterset_fields = ['album_pub_date']
-
+    filterset_class = AlbumFilter
+    
     def get_queryset(self):
         return Album.objects.filter(user=self.request.user)
 
@@ -38,7 +39,8 @@ class PhotoAPIList(generics.ListCreateAPIView):
 
     filter_backends = (DjangoFilterBackend, SearchFilter, OrderingFilter)
     filterset_fields = ['category', 'photo_pub_date']
-
+    filterset_class = PhotoFilter
+    
     def get_queryset(self):
         return Photo.objects.filter(user=self.request.user)
 
