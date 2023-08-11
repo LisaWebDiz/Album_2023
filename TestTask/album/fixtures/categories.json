@@ -1,1 +1,0 @@
-[{"model": "album.category", "pk": 1, "fields": {"cat_title": "Снимок экрана"}}, {"model": "album.category", "pk": 2, "fields": {"cat_title": "Пейзаж"}}]
