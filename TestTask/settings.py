@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'album',
+    'album.apps.AlbumConfig',
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
@@ -163,8 +163,5 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DATETIME_FORMAT': "%d.%m.%Y %H:%M:%S",
 }
-
-LOGIN_REDIRECT_URL = '/api/v1/'
-
 
 LOGIN_REDIRECT_URL = '/api/v1/'
