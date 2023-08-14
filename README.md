@@ -26,7 +26,7 @@ http://127.0.0.1:8000/api/v1/drf-authlogin/
 http://127.0.0.1:8000/swagger/
   
 ### Postman:  
-Создание нового пользователя: GET http://127.0.0.1:8000/api/v1/auth/users/  
+Создание нового пользователя: POST http://127.0.0.1:8000/api/v1/auth/users/  
 Получение токена: POST http://127.0.0.1:8000/auth/token/login  
 Разлогиниться: POST http://127.0.0.1:8000/auth/token/logout  
 
