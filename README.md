@@ -16,8 +16,6 @@ python manage.py loaddata album/fixtures/dump.json
 
 ### Панель администратора:  
 http://127.0.0.1:8000/admin/  
-Логин: Lisa  
-Пароль: Lisa  
   
 ### Авторизация в браузере:  
 http://127.0.0.1:8000/api/v1/drf-authlogin/  
