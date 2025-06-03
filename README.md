@@ -1,4 +1,7 @@
-### Запуск
+### Album Project 2023
+### Description
+
+### Quick start
 
 Cкопировать файл 
 cp example.env .env
