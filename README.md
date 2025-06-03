@@ -15,7 +15,7 @@ python manage.py migrate
 python manage.py runserver  
 
 python manage.py loaddata album/fixtures/dump.json 
-
+```
 Enjoy!
 
 
