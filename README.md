@@ -2,11 +2,11 @@
 ### Description
 
 ### Quick start
-
-Cкопировать файл 
+```bash
+git clone https://github.com/yourusername/album_2023.git
+cd album_2023.git
 cp example.env .env
 
-Выполнить команды:  
 python3 -m venv venv  
 source ./venv/bin/activate  
 pip install -r requirements.txt  
@@ -14,8 +14,10 @@ python manage.py makemigrations
 python manage.py migrate  
 python manage.py runserver  
 
-### Заполнение баз данных:   
 python manage.py loaddata album/fixtures/dump.json 
+
+Enjoy!
+
 
 ### Панель администратора:  
 http://127.0.0.1:8000/admin/  
