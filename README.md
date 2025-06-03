@@ -19,27 +19,34 @@ python manage.py loaddata album/fixtures/dump.json
 Enjoy!
 
 
-### Панель администратора:  
+### Administration Panel:  
 http://127.0.0.1:8000/admin/  
   
-### Авторизация в браузере:  
+### Web authorization:  
 http://127.0.0.1:8000/api/v1/drf-authlogin/  
 
-### Документация swagger:  
+### Swagger Documentation:  
 http://127.0.0.1:8000/swagger/
   
 ### Postman:  
-Создание нового пользователя: POST http://127.0.0.1:8000/api/v1/auth/users/  
-Получение токена: POST http://127.0.0.1:8000/auth/token/login  
-Разлогиниться: POST http://127.0.0.1:8000/auth/token/logout  
+New user creation: POST http://127.0.0.1:8000/api/v1/auth/users/  
+Getting token: POST http://127.0.0.1:8000/auth/token/login  
+Log out: POST http://127.0.0.1:8000/auth/token/logout  
 
-### Командная строка Linux:  
-Создание нового пользователя: curl -d "username=Lisa3&password=Lisa3765?:%" -X POST http://localhost:8000/api/v1/auth/users/  
-Получение токена: curl -d "username=Lisa3&password=Lisa3765?:%" -X POST http://localhost:8000/auth/token/login/  
+### Linux:  
+New user creation: curl -d "username=Lisa3&password=Lisa3765?:%" -X POST http://localhost:8000/api/v1/auth/users/  
+Getting token: curl -d "username=Lisa3&password=Lisa3765?:%" -X POST http://localhost:8000/auth/token/login/
 
-### Тесты:
+### Features
+    • User registration and login via Djoser
+    • Django admin panel for managing data
+    • Fully documented REST API
+    • Data storage using PostgreSQL
+    • pgAdmin for database viewing: http://localhost:5050
+    • Admin panel: http://localhost:8000/admin/
+    • Registration/Authentication: out-of-the-box with Django and Djoser API
 
-
+### Tests:
 |Name                                 |Stmts|Miss| Cover
 |-------------------------------------|-----|----|-----
 |album/__init__.py                    |  0  |  0 | 100%
