@@ -1,5 +1,7 @@
-### Album Project 2023
+# Album Project 2023
+
 ### Description
+A web application for creating and managing personal photo albums. A registered user can create albums, upload and store images, and view or manage only their own content. A custom manage.py command is included for initial database population with sample data. Media files are organized and served via Django’s static and media file configuration. Strong permissions: each user can only access their own albums and media.
 
 ### Quick start
 ```bash
@@ -26,8 +28,8 @@ Enjoy!
 http://127.0.0.1:8000/api/v1/drf-authlogin/  
   
 ### Postman:  
-New user creation: POST http://127.0.0.1:8000/api/v1/auth/users/  
-Getting token: POST http://127.0.0.1:8000/auth/token/login  
+Create a new user: POST http://127.0.0.1:8000/api/v1/auth/users/  
+Obtain token: POST http://127.0.0.1:8000/auth/token/login  
 Log out: POST http://127.0.0.1:8000/auth/token/logout  
 
 ### Linux:  
@@ -36,6 +38,7 @@ Getting token: curl -d "username=Lisa3&password=Lisa3765?:%" -X POST http://loca
 
 ### Key Features
     • User registration & authentication: out-of-the-box with Django and Djoser API
+    • Security: Users have access only to their own albums and photos — no cross-user visibility
     • Django admin panel for managing data at http://localhost:8000/admin/
     • Fully documented REST API
     • Data storage using PostgreSQL
@@ -43,11 +46,7 @@ Getting token: curl -d "username=Lisa3&password=Lisa3765?:%" -X POST http://loca
     • Admin panel: http://localhost:8000/admin/
     • Catalogue list view and detail view for albums
     • Add / edit / delete entries — available for registered users
-
-
-
-    
-
+ 
 ### Tests:
 |Name                                 |Stmts|Miss| Cover
 |-------------------------------------|-----|----|-----
