@@ -20,9 +20,11 @@ python manage.py loaddata album/fixtures/dump.json
 ```
 Enjoy!
 
-### API Documentation:  
+### API Documentation:
+```
 • Swagger UI: http://localhost:8000/swagger/
 • Redoc: http://localhost:8000/redoc/
+```
  
 ### Web authorization:  
 http://127.0.0.1:8000/api/v1/drf-authlogin/  
