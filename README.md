@@ -18,15 +18,12 @@ python manage.py loaddata album/fixtures/dump.json
 ```
 Enjoy!
 
-
-### Administration Panel:  
-http://127.0.0.1:8000/admin/  
-  
+### API Documentation:  
+• Swagger UI: http://localhost:8000/swagger/
+• Redoc: http://localhost:8000/redoc/
+ 
 ### Web authorization:  
 http://127.0.0.1:8000/api/v1/drf-authlogin/  
-
-### Swagger Documentation:  
-http://127.0.0.1:8000/swagger/
   
 ### Postman:  
 New user creation: POST http://127.0.0.1:8000/api/v1/auth/users/  
@@ -37,14 +34,19 @@ Log out: POST http://127.0.0.1:8000/auth/token/logout
 New user creation: curl -d "username=Lisa3&password=Lisa3765?:%" -X POST http://localhost:8000/api/v1/auth/users/  
 Getting token: curl -d "username=Lisa3&password=Lisa3765?:%" -X POST http://localhost:8000/auth/token/login/
 
-### Features
-    • User registration and login via Djoser
-    • Django admin panel for managing data
+### Key Features
+    • User registration & authentication: out-of-the-box with Django and Djoser API
+    • Django admin panel for managing data at http://localhost:8000/admin/
     • Fully documented REST API
     • Data storage using PostgreSQL
-    • pgAdmin for database viewing: http://localhost:5050
+    • Built-in pgAdmin interface for managing the database at http://localhost:5050
     • Admin panel: http://localhost:8000/admin/
-    • Registration/Authentication: out-of-the-box with Django and Djoser API
+    • Catalogue list view and detail view for albums
+    • Add / edit / delete entries — available for registered users
+
+
+
+    
 
 ### Tests:
 |Name                                 |Stmts|Miss| Cover
